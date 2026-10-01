@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+*.vsix
+.DS_Store
+Thumbs.db
+icon.svg
+create-icon.js

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "OC32 Assembly",
+  "scopeName": "source.oc32asm",
+  "fileTypes": ["S", "s"],
+  "patterns": [
+    { "name": "comment.line.semicolon.oc32asm", "match": ";.*$" },
+    { "name": "comment.block.oc32asm", "begin": "/\\*", "end": "\\*/" },
+    { "name": "comment.line.hash.oc32asm", "match": "#.*$" },
+    {
+      "name": "punctuation.definition.directive.oc32asm",
+      "match": "\\.(file|ident|section|align|globl|global|type|size|previous|balign|string|long|zero|word|byte|data|text|rodata|stext|bss)\\b"
+    },
+    { "name": "entity.name.function.oc32asm", "match": "^[ \\t]*([a-zA-Z_][a-zA-Z0-9_]*)\\s*:" },
+    { "name": "entity.name.label.local.oc32asm", "match": "^[ \\t]*(\\.L\\d+)\\s*:" },
+    { "name": "meta.register-name.oc32asm", "match": "\\b(R(?:[0-9]|[12][0-9]|31))\\b" },
+    { "name": "keyword.control.jump.oc32asm", "match": "\\b(J|JZ|JNZ|JL|RETE)\\b" },
+    { "name": "keyword.control.syscall.oc32asm", "match": "\\b(SYSC|TRAPZ|TRAPNZ)\\b" },
+    { "name": "keyword.control.status.oc32asm", "match": "\\b(RDSR|WRSR|SBSR|CBSR|TBSR)\\b" },
+    { "name": "keyword.control.addsub.oc32asm", "match": "\\b(ADD|SUB|SUBB)\\b" },
+    { "name": "keyword.operator.arithmetic.oc32asm", "match": "\\b(MUL|MULU|DIV|DIVU|AND|OR|XOR|NAND|NOR|EBF|MBF|SEB|SEH|CLO|CLZ)\\b" },
+    { "name": "keyword.operator.compare.oc32asm", "match": "\\b(CMP|CMPU)\\b" },
+    { "name": "keyword.operator.bitwise.oc32asm", "match": "\\b(RV|RVB|SL|SA|SR)\\b" },
+    { "name": "keyword.operator.move.oc32asm", "match": "\\b(MOV|MOVZ|MOVNZ|MOVH)\\b" },
+    { "name": "keyword.operator.memory.oc32asm", "match": "\\b(LW|LWI|LWIF|LWAS|LB|LBU|SW|SWI|SWAT|SB)\\b" },
+    { "name": "constant.numeric.hex.oc32asm", "match": "\\b(0x[0-9a-fA-F]+)\\b" },
+    { "name": "constant.numeric.binary.oc32asm", "match": "\\b(0b[01]+)\\b" },
+    { "name": "constant.numeric.decimal.oc32asm", "match": "\\b([0-9]+)\\b" },
+    { "name": "punctuation.separator.comma.oc32asm", "match": "," },
+    { "name": "string.quoted.double.oc32asm", "match": "\"[^\"]*\"" }
+  ]
+}

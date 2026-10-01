@@ -1,0 +1,10 @@
+{
+  "scopeName": "oc32.injection.gcc-attribute",
+  "injectionSelector": "L:source.c -comment -string, L:source.cpp -comment -string",
+  "patterns": [
+    {
+      "name": "keyword.other.attribute.gcc",
+      "match": "\\b__attribute__(?=\\s*\\()"
+    }
+  ]
+}

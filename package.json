@@ -1,0 +1,78 @@
+{
+  "name": "oc32-assembly-formatter",
+  "displayName": "OC32 Assembly Formatter",
+  "description": "OC32 汇编语法高亮和格式化插件",
+  "version": "1.0.2",
+  "publisher": "oc32dev",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "oc32asm",
+        "aliases": [
+          "OC32 Assembly",
+          "oc32asm"
+        ],
+        "extensions": [
+          ".S",
+          ".s",
+          ".asm"
+        ],
+        "configuration": "./language.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "oc32asm",
+        "scopeName": "source.oc32asm",
+        "path": "./syntaxes/oc32asm.tmLanguage.json"
+      },
+      {
+        "scopeName": "oc32.injection.gcc-attribute",
+        "path": "./syntaxes/gcc-attribute.injection.json",
+        "injectTo": ["source.c", "source.cpp"]
+      }
+    ],
+    "themes": [
+      {
+        "label": "OC32 Assembly Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oc32asm-dark.json"
+      },
+      {
+        "label": "OC32 Assembly Light",
+        "uiTheme": "vs",
+        "path": "./themes/oc32asm-light.json"
+      }
+    ]
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oc32",
+    "assembly",
+    "syntax-highlighting",
+    "formatter"
+  ],
+  "author": "oc32dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@vscode/vsce": "^2.15.0"
+  }
+}

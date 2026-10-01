@@ -1,0 +1,14 @@
+# 依赖与构建工具（运行时不需要）
+node_modules/
+package-lock.json
+merge_themes.js
+gen_icon.js
+build.ps1
+
+# 基础主题缓存（合并脚本自动生成，仅构建时使用）
+themes/.base-cache/
+
+# 项目内部配置与开发文档
+.trae/
+.gitignore
+INSTALL.md
