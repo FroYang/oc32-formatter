@@ -4,11 +4,16 @@ package-lock.json
 merge_themes.js
 gen_icon.js
 build.ps1
+build.sh
 
 # 基础主题缓存（合并脚本自动生成，仅构建时使用）
 themes/.base-cache/
 
 # 项目内部配置与开发文档
 .trae/
+.git/
 .gitignore
 INSTALL.md
+README.md
+LICENSE
+LICENSE.txt

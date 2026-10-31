@@ -1,9 +1,9 @@
 {
-  "name": "oc32-assembly-formatter",
-  "displayName": "OC32 Assembly Formatter",
-  "description": "OC32 汇编语法高亮和格式化插件",
-  "version": "1.0.2",
-  "publisher": "oc32dev",
+  "name": "oc32-asm-syntax",
+  "displayName": "OC32 ASM Syntax",
+  "description": "OC32 ASM Syntax",
+  "version": "1.0.3",
+  "publisher": "FroYang",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -41,12 +41,12 @@
     ],
     "themes": [
       {
-        "label": "OC32 Assembly Dark",
+        "label": "OC32 Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/oc32asm-dark.json"
       },
       {
-        "label": "OC32 Assembly Light",
+        "label": "OC32 Light",
         "uiTheme": "vs",
         "path": "./themes/oc32asm-light.json"
       }
@@ -58,11 +58,10 @@
   },
   "keywords": [
     "oc32",
-    "assembly",
-    "syntax-highlighting",
-    "formatter"
+    "asm",
+    "syntax"
   ],
-  "author": "oc32dev",
+  "author": "FroYang",
   "license": "MIT",
   "repository": {
     "type": "git",
