@@ -147,6 +147,8 @@ if [ -f "${VSIX_FILE}" ]; then
     echo ""
     echo "   安装方式:"
     echo "     code --install-extension \"${VSIX_FILE}\""
+    \rm ~/oc32/linux/share/vscode/*.vsix
+    \cp ${VSIX_FILE} ~/oc32/linux/share/vscode/
 else
     echo "❌ 打包失败，未找到输出文件: ${VSIX_FILE}"
     exit 1
